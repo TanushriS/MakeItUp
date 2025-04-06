@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
+import logo from '../../assets/logo.png';
 
 function NavbarComponent() {
   const { currentUser, logout } = useAuth();
@@ -21,7 +22,7 @@ function NavbarComponent() {
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
-            src="/logo.png"
+            src={logo}
             width="30"
             height="30"
             className="d-inline-block align-top me-2"
